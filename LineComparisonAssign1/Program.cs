@@ -9,6 +9,26 @@
 
             double line1Length = CalculateLineLength(line1Cordinates);
             Console.WriteLine(line1Length);
+
+            Console.WriteLine("Enter the coordinates  the second line (x1, y1, x2, y2):");
+            double[] line2Cordinates = ReadCoordinates();
+
+            double line2Length = CalculateLineLength(line2Cordinates);
+            Console.WriteLine(line2Length);
+
+
+            int result = line1Length.CompareTo(line2Length);
+            Console.WriteLine(result);
+
+            if (result == 0)
+            {
+                Console.WriteLine("Line 1 is equal to  Line 2");
+            }
+            else
+            {
+                Console.WriteLine("Lines are not equal");
+            }
+
         }
 
         static double[] ReadCoordinates()
